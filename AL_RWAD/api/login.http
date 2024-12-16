@@ -1,0 +1,9 @@
+POST http://localhost/AL_RWAD/kaiadmin-lite-1.2.0/api/login.php  
+Content-Type: application/json
+
+{
+
+    "username":"773098320",
+    "password":"OdYtapeK"
+   
+}

@@ -1,0 +1,87 @@
+إذا كنت تواجه خطأ "Fatal Error: Syntax" عند استخدام النص الذي أرسلته، فمن المحتمل أن يكون هناك مشكلة في كيفية إدخال النص في كود PHP. 
+
+### نصائح لتجنب الأخطاء:
+
+1. **التحقق من علامات الاقتباس**:
+   - تأكد من استخدام علامات الاقتباس بشكل صحيح. إذا كان النص يحتوي على علامات اقتباس داخلية، يجب استخدام علامات اقتباس مختلفة أو الهروب منها.
+
+2. **الهروب من الأحرف الخاصة**:
+   - إذا كان النص يحتوي على أحرف خاصة مثل `"` أو `'`، يمكنك الهروب منها باستخدام `\`.
+
+3. **استخدام HEREDOC**:
+   - يمكنك استخدام طريقة HERDOC لتسهيل إدخال نصوص متعددة الأسطر.
+
+### مثال بتصحيح النص باستخدام HEREDOC:
+
+```php
+<?php
+// إنشاء اتصال بقاعدة البيانات
+$conn = new mysqli("localhost", "اسم المستخدم", "كلمة المرور", "اسم قاعدة البيانات");
+
+// التحقق من الاتصال
+if ($conn->connect_error) {
+    die("فشل الاتصال: " . $conn->connect_error);
+}
+
+// نص المقالة مع تاقات HTML باستخدام HEREDOC
+$title = "Exploration at its Greatest";
+$content = <<<EOD
+<h1>The Final Frontier</h1>
+<p>Man must explore, and this is exploration at its greatest. Problms look mighty small from 150 miles up.</p>
+<p>Posted by Start Bootstrap on August 24, 2023</p>
+<p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in heory.</p>
+<p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
+<p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
+<p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeingthe Earth for the first time. I could not help but love and cherish her.</p>
+<p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
+<h2>Reaching for the Stars</h2>
+<p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can iagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+<p>... To go places and do things that have never been done before – that’s what living is all about.</p>
+<p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before./p>
+<p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+<p>Placeholder text by Space Ipsum · Images by NASA on The Commons</p>
+EOD;
+
+// استعلام لإضافة المقالة إلى الجدول
+$sql = "INSERT INTO articles (title, content) VALUES (?, ?)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ss", $title, $content);
+
+if ($stmt->execute()) {
+    echo "تم إضافة المقالة بنجاح.";
+} else 
+    echo "خطأ في إضافة المقالة: " . $stmt->error;
+}
+
+// إغلاق الاتصال
+$stmt->close();
+$conn->close();
+?>
+```
+
+### استخدام HEREDOC
+
+- **HEREDOC** يسمح لك بكتابة نصوص متعددة الأسطر دون الحاجة إلى الهروب من علامات الاقتباس أو استخدام علامات اقتباس داخلية.
+
+### ملاحظات
+
+- تأكد من استبدال `"اسم المستخدم"`, `"كلمة المرور"`, `"اسم قاعدة البيانات"` بالقيم الصحيحة.
+- إذا استمر الخطأ، تحقق من أي أسطر أخرى في الكود قد تسبب المشكلة.
+
+إذا كان لديك أي استفسارات إضافية أو تحتاج لمزيد من المساعدة، فلا تتردد في طرحها!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

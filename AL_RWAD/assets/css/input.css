@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap');
+body{
+
+
+  font-family: "Marhey", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+
+}
+
+div {
+  position: relative;
+}
+
+/* input {
+  width: 6.5em;
+  color: white;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom-color: hsla(341, 97%, 59%, 0.2);
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+span {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  opacity: 0;
+  background-color: #fc2f70;
+  transform-origin: center;
+  transform: translate(-50%, 0) scaleX(0);
+  transition: all 0.3s ease;
+}
+
+input:focus ~ span {
+  transform: translate(-50%, 0) scaleX(1);
+  opacity: 1;
+} 
+
+
+/* From Uiverse.io by AbanoubMagdy1 */ 
+.wave-group {
+  position: relative;
+}
+
+.wave-group .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+
+
+
+
+/* From Uiverse.io by VijinV */ 
+.inputbox {
+  position: relative;
+  width: 100%;
+}
+
+.inputbox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.inputbox span {
+  position: absolute;
+right: 0;
+  padding: 20px 10px 10px;
+  font-size: 1em;
+  color: #8f8f8f;
+  letter-spacing: 00.05em;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.inputbox input:valid ~span,
+.inputbox input:focus ~span {
+  color: #45ff83;
+  transform: translateX(-10px) translateY(-34px);
+  font-size: 0,75em;
+}
+
+.inputbox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #45f3ff;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.inputbox input:valid ~i,
+.inputbox input:focus ~i {
+  height: 44px;
+}
+
+/* hh */
+.term {
+  position: relative;
+}
+
+.term::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #3cefff;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.term:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+
+/* return */
+button {
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: hsl(129, 18%, 49%);
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+}
+
+button::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #3cff46;
+  transform-origin: center;
+  transform: translate3d(-50%, 50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #161616;
+}
+
+button:hover::before {
+  transform: translate3d(-50%, 50%, 0) scale3d(15, 15, 15);
+}
+
+
+
+
+
+.button {
+  position: relative;
+}
+.button{
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: hsl(129, 18%, 49%);
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+}
+
+.button::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #3cff46;
+  transform-origin: center;
+  transform: translate3d(-50%, 50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: #161616;
+}
+
+.button:hover::before {
+  transform: translate3d(-50%, 50%, 0) scale3d(15, 15, 15);
+}

@@ -1,0 +1,30 @@
+POST http://localhost/AL_RWAD/kaiadmin-lite-1.2.0/api/register_student.php  
+Content-Type: application/json
+
+{
+
+   
+    "full_name":"احمد صالح احمد محمد",
+    "phone_number": "771888959",
+    "date_of_birth": "2000-01-01",
+    "place_of_birth": "اب",
+    "governorate": "اب",
+    "area": "الجبل الاخضر",
+    "current_residence": "Al-Safia",
+    "current_residence_details": "Sanaa City",
+    "mobile_number": "771888999",
+    "health_conditions": "run",
+    "school_name": "Al-Rwad School",
+    "next_grade": "12",
+    "last_grade_percentage": "85",
+    "guardian_name": "Ali Abdullah Abdullah Sallh",
+    "relationship": "Father",
+    "guardian_occupation": "Teacher",
+    "guardian_mobile": "771888999",
+    "skills_hobbies": "Football, Reading",
+    "achievements_participations": "Won a science fair",
+    "reason_for_joining": "To improve my skills",
+    "future_ambitions": "Become an engineer",
+    "desired_school": "Engineering School"
+
+}

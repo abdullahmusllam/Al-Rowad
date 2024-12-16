@@ -1,0 +1,15 @@
+@font-face{
+    src: url('../fonts/fonts/variable/Alexandria[wght].ttf');
+    font-family: "Alexandria";
+}
+body  {
+
+    font-family: "Alexandria";
+}
+td
+ {
+    font-family: "Alexandria";
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+}
