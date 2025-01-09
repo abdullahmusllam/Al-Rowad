@@ -43,7 +43,7 @@ include("../classes/EvaluationCod.php");
                     </div>
                     <div class="col col-stats ms-3 ms-sm-0">
                       <div class="numbers">
-                        <p class="card-category">Visitors</p>
+                        <div class="card-category">المتقدمين</div>
                         <h4 class="card-title">1,294</h4>
                       </div>
                     </div>
@@ -63,7 +63,7 @@ include("../classes/EvaluationCod.php");
                     </div>
                     <div class="col col-stats ms-3 ms-sm-0">
                       <div class="numbers">
-                        <p class="card-category">Subscribers</p>
+                        <div class="card-category">المقابلين</div>
                         <h4 class="card-title">1303</h4>
                       </div>
                     </div>
@@ -83,7 +83,7 @@ include("../classes/EvaluationCod.php");
                     </div>
                     <div class="col col-stats ms-3 ms-sm-0">
                       <div class="numbers">
-                        <p class="card-category">Sales</p>
+                        <div class="card-category">المقيّمين</div>
                         <h4 class="card-title">$ 1,345</h4>
                       </div>
                     </div>
@@ -103,7 +103,7 @@ include("../classes/EvaluationCod.php");
                     </div>
                     <div class="col col-stats ms-3 ms-sm-0">
                       <div class="numbers">
-                        <p class="card-category">Order</p>
+                        <div class="card-category">طلاب المركز</div>
                         <h4 class="card-title">576</h4>
                       </div>
                     </div>
@@ -116,7 +116,7 @@ include("../classes/EvaluationCod.php");
       </div>
     </div>
   </div>
-  </div>
+  </>
   <!-- Custom template | don't include it in your project! -->
   <?php include("../layout/custom_template.php") ?>
   <!-- End Custom template -->

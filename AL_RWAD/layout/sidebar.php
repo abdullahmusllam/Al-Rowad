@@ -77,7 +77,7 @@
            <div class="collapse" id="forms">
              <ul class="nav nav-collapse">
                <li>
-                 <a href="../layout/editingcontent.php">
+                 <a href="../registration/editingcontent.php">
                    <span class="sub-item">الشروط</span>
                  </a>
                </li>
