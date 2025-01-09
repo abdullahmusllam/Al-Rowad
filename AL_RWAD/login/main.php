@@ -1,7 +1,7 @@
 <?php
 include("../classes/EvaluationCod.php");
 
-$registration = DB::count("applicants", "1");
+$registration = DB::count("applicants", "pass IS NULL");
 $row = mysqli_fetch_array($registration);
 $registrationCount = $row[0];
 
