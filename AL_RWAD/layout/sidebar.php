@@ -62,20 +62,11 @@
            <!-- <h4 class="text-section">Components</h4> -->
          </li>
          <li class="nav-item">
-           <a data-bs-toggle="collapse" href="#base">
+           <a  href="../login/main.php">
              <i class="fas fa-home"></i>
-             <p>مركز الرواد</p>
-             <span class="caret"></span>
+             <p>الصفحة الرئيسية</p>
+             <!-- <span class="caret"></span> -->
            </a>
-           <div class="collapse" id="base">
-             <ul class="nav nav-collapse">
-               <li>
-                 <a href="../login_evaluation/student_final_table.php">
-                   <span class="sub-item">الكشف العام</span>
-                 </a>
-               </li>
-             </ul>
-           </div>
          </li>
          <li class="nav-item">
            <a data-bs-toggle="collapse" href="#forms">
@@ -196,6 +187,13 @@
                </li>
              </ul>
            </div>
+         </li>
+         <li class="nav-item">
+           <a  href="../login_evaluation/student_final_table.php">
+             <i class="fas fa-users"></i>
+             <p>الكشف العام</p>
+             <!-- <span class="caret"></span> -->
+           </a>
          </li>
        </ul>
      </div>

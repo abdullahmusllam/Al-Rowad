@@ -1,4 +1,4 @@
-<div class="custom-template">
+<!-- <div class="custom-template">
         <div class="title">Settings</div>
         <div class="custom-content">
           <div class="switcher">
@@ -189,4 +189,4 @@
         <div class="custom-toggle">
           <i class="icon-settings"></i>
         </div>
-      </div>
+      </div> -->

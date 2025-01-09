@@ -38,20 +38,18 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link rel="stylesheet" href="../assets/css/demo.css" />
   <link rel="stylesheet" href="../assets/css/btn.css" />
-  <link rel="stylesheet" href="../assets/css/fonttable.css" />
+  <link rel="stylesheet" href="../assets/css/mainFont.css" />
   <link rel="stylesheet" href="../assets/css/animate.css" />
   <link rel="stylesheet" href="../assets/css/input.css" />
   <style>
     body {
       font-family: "Alexandria";
     }
-    td {
-      font-family: "Alexandria";
-    }
+
     td {
       font-family: "Alexandria";
       font-optical-sizing: auto;
-      font-weight: 50;
+      font-weight: 500;
       font-style: normal;
     }
     .btn {
