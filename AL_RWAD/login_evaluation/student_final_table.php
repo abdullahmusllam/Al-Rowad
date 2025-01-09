@@ -30,14 +30,14 @@ include("../classes/EvaluationCod.php");
           <div class="page-header">
             <h3 class="fw-bold mb-3 animate__animated animate__rubberBand"> الكشف العام</h3>
             <ul class="breadcrumbs mb-3">
-              <!-- <li class="nav-home animate__animated animate__backInRight">
-                <a href="../index.php">
+              <li class="nav-home animate__animated animate__backInRight">
+                <a href="../login/main.php">
                   <i class="icon-home"></i>
                 </a>
               </li>
               <li class="separator animate__animated animate__backInRight">
                 <i class="icon-arrow-right"></i>
-              </li> -->
+              </li>
               <li class="nav-item animate__animated animate__backInRight">
                 <a href="#try">الكشف العام</a>
               </li>

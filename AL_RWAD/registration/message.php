@@ -55,7 +55,7 @@
             <h3 class="fw-bold mb-3 animate__animated animate__rubberBand"> التسجيل</h3>
             <ul class="breadcrumbs mb-3">
               <li class="nav-home animate__animated animate__backInRight">
-                <a href="../index.php">
+                <a href="../login/main.php">
                   <i class="icon-home"></i>
                 </a>
               </li>

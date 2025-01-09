@@ -31,7 +31,7 @@ if (isset($_POST['update_inter'])) {
             </h3>
             <ul class="breadcrumbs mb-3">
               <li class="nav-home animate__animated animate__backInRight">
-                <a href="../login_evaluation/student_final_table.php">
+                <a href="../login/main.php">
                   <i class="icon-home"></i>
                 </a>
               </li>

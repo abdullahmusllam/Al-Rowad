@@ -23,7 +23,7 @@
             <h3 class="fw-bold mb-3">التسجيل</h3>
             <ul class="breadcrumbs mb-3">
               <li class="nav-home">
-                <a href="../index.php" title="الانتقال الى الصفحة الرائسيه">
+                <a href="../login/main.php" title="الانتقال الى الصفحة الرائسيه">
                   <i class="icon-home"></i>
                 </a>
               </li>

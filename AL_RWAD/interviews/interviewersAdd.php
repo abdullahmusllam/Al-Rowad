@@ -22,7 +22,7 @@
             <h3 class="fw-bold mb-3 animate__animated animate__rubberBand"> المقابلة</h3>
             <ul class="breadcrumbs mb-3">
               <li class="nav-home animate__animated animate__backInRight">
-                <a href="../login_evaluation/student_final_table.php">
+                <a href="../login/main.php">
                   <i class="icon-home"></i>
                 </a>
               </li>

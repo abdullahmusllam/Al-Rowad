@@ -376,7 +376,18 @@ class DB {
                         }
     }
 
-    
+    public static function count($tablename, $condition){
+        $conn = self::connected();
+        $sql = "SELECT COUNT(*) 
+                FROM $tablename
+                WHERE $condition;";
+        try{
+        $result = mysqli_query($conn, $sql);
+        return $result;
+        } catch (mysqli_sql_exception $e) {
+            echo "". $e->getMessage() ."";
+        }
+    }
 }
 
 

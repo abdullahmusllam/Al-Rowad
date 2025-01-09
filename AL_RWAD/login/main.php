@@ -1,5 +1,21 @@
 <?php
 include("../classes/EvaluationCod.php");
+
+$registration = DB::count("applicants", "1");
+$row = mysqli_fetch_array($registration);
+$registrationCount = $row[0];
+
+$interviewers = DB::count("interviewers", "1");
+$row = mysqli_fetch_array($interviewers);
+$interviewersCount = $row[0];
+
+$residents = DB::count("residents", "1");
+$row = mysqli_fetch_array($residents);
+$residentsCount = $row[0];
+
+$students = DB::count("student", "1");
+$row = mysqli_fetch_array($students);
+$studentsCount = $row[0];
 ?>
 <?php session_start();
 
@@ -44,7 +60,7 @@ include("../classes/EvaluationCod.php");
                     <div class="col col-stats ms-3 ms-sm-0">
                       <div class="numbers">
                         <div class="card-category">المتقدمين</div>
-                        <h4 class="card-title">1,294</h4>
+                        <h4 class="card-title"><?= $registrationCount;?></h4>
                       </div>
                     </div>
                   </div>
@@ -64,7 +80,7 @@ include("../classes/EvaluationCod.php");
                     <div class="col col-stats ms-3 ms-sm-0">
                       <div class="numbers">
                         <div class="card-category">المقابلين</div>
-                        <h4 class="card-title">1303</h4>
+                        <h4 class="card-title"><?= $interviewersCount?></h4>
                       </div>
                     </div>
                   </div>
@@ -84,7 +100,7 @@ include("../classes/EvaluationCod.php");
                     <div class="col col-stats ms-3 ms-sm-0">
                       <div class="numbers">
                         <div class="card-category">المقيّمين</div>
-                        <h4 class="card-title">$ 1,345</h4>
+                        <h4 class="card-title"><?=$residentsCount?></h4>
                       </div>
                     </div>
                   </div>
@@ -104,7 +120,7 @@ include("../classes/EvaluationCod.php");
                     <div class="col col-stats ms-3 ms-sm-0">
                       <div class="numbers">
                         <div class="card-category">طلاب المركز</div>
-                        <h4 class="card-title">576</h4>
+                        <h4 class="card-title"><?=$studentsCount?></h4>
                       </div>
                     </div>
                   </div>
