@@ -7,12 +7,13 @@ include("../classes/EvaluationCod.php");
 // if (!isset($_SESSION["username"])) {
 //   header("Location:../login/index.php");
 //   exit;
-// } ?>
+// } 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-<?php include '../layout/head.php'?>
+  <?php include '../layout/head.php' ?>
 </head>
 
 <body dir="rtl">
@@ -35,12 +36,12 @@ include("../classes/EvaluationCod.php");
                   <i class="icon-home"></i>
                 </a>
               </li>
-              <li class="separator animate__animated animate__backInRight">
+              <!-- <li class="separator animate__animated animate__backInRight">
                 <i class="icon-arrow-right"></i>
-              </li>
-              <li class="nav-item animate__animated animate__backInRight">
+              </li> -->
+              <!-- <li class="nav-item animate__animated animate__backInRight">
                 <a href="#try">الكشف العام</a>
-              </li>
+              </li> -->
 
               <!-- <li class="separator">
                 <i class="icon-arrow-right"></i>
@@ -89,13 +90,17 @@ include("../classes/EvaluationCod.php");
 
                               <td>
                                 <form method="post">
+                                <div class="d-flex align-items-center gap-2">
+                                  <a href="accessories.php?id=<?= htmlspecialchars($rows["student_id"]) ?>" class="btn btn-primary">
+                                    الملحقات
+                                  </a>
                                   <a class="btn btn-warning" href="updateStudent.php?id=<?= htmlspecialchars($rows["student_id"]) ?>">
                                     تعديل
                                   </a>
                                   <a href="student_details.php?id=<?= htmlspecialchars($rows["student_id"]) ?>" class="btn btn-secondary">تفاصيل</a>
+                                </div>
                                 </form>
                               </td>
-
                             </tr>
                           <?php } ?>
                         </tbody>

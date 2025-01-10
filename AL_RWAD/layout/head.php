@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="../assets/css/btn.css" />
   <link rel="stylesheet" href="../assets/css/mainFont.css" />
   <link rel="stylesheet" href="../assets/css/animate.css" />
-  <link rel="stylesheet" href="../assets/css/input.css" />
+  <!-- <link rel="stylesheet" href="../assets/css/input.css" /> -->
   <style>
     body {
       font-family: "Alexandria";

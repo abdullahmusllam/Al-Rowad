@@ -219,10 +219,12 @@
                               echo  "";
                             } else { ?>
                         <form method="post">
+                        <div class="d-flex align-items-center gap-2">
                           <input type="hidden" name="hid" value="<?php echo $row['applicant_id']; ?>">
                           <input type="hidden" name="registration_date" value="<?php echo $row['registration_date']; ?>">
                           <input class="btn btn-success" type="submit" name="pass" value="مقبول">
                           <input class="btn btn-danger" type="submit" name="nopass" value="غير مقبول">
+                          </div>
                         </form>
 
                     <?php }
