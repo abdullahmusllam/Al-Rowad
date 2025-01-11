@@ -54,7 +54,7 @@ $studentsCount = $row[0];
                     <div class="col-icon">
                       <div
                         class="icon-big text-center icon-primary bubble-shadow-small">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-file-signature icon"></i>
                       </div>
                     </div>
                     <div class="col col-stats ms-3 ms-sm-0">
@@ -74,7 +74,7 @@ $studentsCount = $row[0];
                     <div class="col-icon">
                       <div
                         class="icon-big text-center icon-info bubble-shadow-small">
-                        <i class="fas fa-user-check"></i>
+                        <i class="fas fa-user-tie icon"></i>
                       </div>
                     </div>
                     <div class="col col-stats ms-3 ms-sm-0">
@@ -94,7 +94,7 @@ $studentsCount = $row[0];
                     <div class="col-icon">
                       <div
                         class="icon-big text-center icon-success bubble-shadow-small">
-                        <i class="fas fa-luggage-cart"></i>
+                        <i class="fas fa-tasks icon"></i>
                       </div>
                     </div>
                     <div class="col col-stats ms-3 ms-sm-0">
@@ -114,7 +114,7 @@ $studentsCount = $row[0];
                     <div class="col-icon">
                       <div
                         class="icon-big text-center icon-secondary bubble-shadow-small">
-                        <i class="far fa-check-circle"></i>
+                        <i class="fas fa-user-friends icon"></i>
                       </div>
                     </div>
                     <div class="col col-stats ms-3 ms-sm-0">
