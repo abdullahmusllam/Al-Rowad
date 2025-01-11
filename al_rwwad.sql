@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2024 at 06:37 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: Jan 11, 2025 at 09:03 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -102,7 +102,7 @@ CREATE TABLE `applicants` (
   `reason_join` text DEFAULT NULL,
   `ambition` varchar(100) NOT NULL,
   `school_join` varchar(100) NOT NULL,
-  `pass` varchar(15) NOT NULL,
+  `pass` varchar(15) DEFAULT NULL,
   `registration_date` date NOT NULL,
   `interviewrs_state` enum('','ok','no') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
@@ -115,7 +115,7 @@ INSERT INTO `applicants` (`applicant_id`, `name`, `date_of_berth`, `plase_of_ber
 (160, 'احمد كرام عيظه ساحب ', '2002-06-25', 'حضرموت', 'تريم', 'مشطه', 'حضرموت', 'مشطه', '774228248', '774228248', 'لا', 'مدرسه الكوده', 'أول ثانوي', 93, 'كرام عيظه ساحب ساحب ', 'أب	', 'عمل خاص', '774228248', 'كره القدم والسباحة  وشاركت في الاذاعه المدرسيه', 'حصلت على شهادة تخرج من مركز القلم النموذجيه', ' لتحسين وتطوير المواهب لدي', ' لتحسين وتطوير المواهب لدي', 'الابداع', 'مقبول', '2024-09-25', 'ok'),
 (161, 'احمد حسن احمد علي باعنس', '1999-06-25', 'شبوة	', 'الطلح	', 'لعبل	', 'نواب	', 'الطلح', '773098320	', '773098320	', 'لا', 'عمار بن ياسر', 'التاسع', 81, 'حسن احمد علي باعنس', 'أب', 'مدرس', '773098320', 'قيادة السيارة', 'المشاركة في دورات حظ القران الكريم وعلومه ', 'لمواهب إيجاد التعامل مع الكمبيوتر	المشاركة في دورات حظ القران الكريم وعلومه ', 'ن اخدم بلادي ووطني', 'الابداع', 'مقبول', '2024-09-25', 'ok'),
 (162, 'احمد عبده محفوظ بامير', '1999-11-25', 'حضرموت', 'سيؤن', 'الغرفة=الخيام', 'حضرموت', 'الغرفة=الخيام', '778594837', '778594837', 'لا', 'مدرسة الغرفة ', 'التاسع', 88, 'عبده محفوظ خميس بامير', 'أب', 'عمل خاص', '772086343', 'كرة القدم', 'لاشي', 'لمواهب إيجاد التعامل مع الكمبيوتر	المشاركة في دورات حظ القران الكريم وعلومه ', 'أن أكون محاسب ', 'الابداع', 'مقبول', '2024-09-25', 'ok'),
-(163, 'احمد عمر صالح باحفي ', '1999-11-25', 'حضرموت', 'حوره', 'وادي العين الورقات', 'حضرموت', 'وادي العين الورقات', '781127167	', '781127167', 'لا', 'مدرسة الغرفة ', 'التاسع', 88, 'عمر صالح محفوظ باحفي ', 'أب', 'عمل خاص', '781127167', 'كرة القدم', 'لاشي', 'لمواهب إيجاد التعامل مع الكمبيوتر	المشاركة في دورات حظ القران الكريم وعلومه ', 'أن أكون محاسب ', 'الابداع', '', '2024-09-25', NULL),
+(163, 'احمد عمر صالح باحفي ', '1999-11-25', 'حضرموت', 'حوره', 'وادي العين الورقات', 'حضرموت', 'وادي العين الورقات', '781127167	', '781127167', 'لا', 'مدرسة الغرفة ', 'التاسع', 88, 'عمر صالح محفوظ باحفي ', 'أب', 'عمل خاص', '781127167', 'كرة القدم', 'لاشي', 'لمواهب إيجاد التعامل مع الكمبيوتر	المشاركة في دورات حظ القران الكريم وعلومه ', 'أن أكون محاسب ', 'الابداع', 'مقبول', '2024-09-25', 'no'),
 (164, 'احمد فائز با حنتوش', '1999-11-25', 'شبوة', 'دهر	', 'ريحون', 'شبوة', 'دهر', '774053321', '774053321', 'لا', 'مدرسة الغرفة ', 'التاسع', 88, 'فائز احمد فائز با حنتوش', 'أب', 'عمل خاص', '781127177', 'كرة القدم', 'لاشي', 'لمواهب إيجاد التعامل مع الكمبيوتر	المشاركة في دورات حظ القران الكريم وعلومه ', 'أن أكون محاسب ', 'الابداع', '', '2024-09-25', NULL),
 (165, 'غبدالله محسن النقيب', '2024-09-11', '', '', '', '', '', '', '713113823', '', '', '', 80, '', '', '', '0', '', '', NULL, '', '', 'مقبول', '0000-00-00', 'ok'),
 (169, 'al_rowad@gmail.com', NULL, '', '', '', '', '', '', '', '', '', '', 0, '', '', '', '0', '', '', NULL, '', '', 'مقبول', '0000-00-00', 'ok'),
@@ -123,7 +123,8 @@ INSERT INTO `applicants` (`applicant_id`, `name`, `date_of_berth`, `plase_of_ber
 (172, 'Ahmed Abdullah salh salm', '2000-01-01', 'Sanaa', 'Sanaa', 'Al-Safia', 'Al-Safia', 'Sanaa City', '771888999', '771888999', 'run', 'Al-Rwad School', '12', 85, 'Ali Abdullah Abdullah Sallh', 'Father', 'Teacher', '771888999', 'Football, Reading', 'Won a science fair', 'To improve my skills', 'Become an engineer', 'Engineering School', '', '2024-09-28', NULL),
 (176, 'Ahmed Abdullah salh salms', '2000-01-01', 'Sanaa', 'Sanaa', 'Al-Safia', 'Al-Safia', 'Sanaa City', '771888959', '771888999', 'run', 'Al-Rwad School', '12', 85, 'Ali Abdullah Abdullah Sallh', 'Father', 'Teacher', '771888999', 'Football, Reading', 'Won a science fair', 'To improve my skills', 'Become an engineer', 'Engineering School', '', '2024-09-28', NULL),
 (178, 'Ahmed Abdullah salh salmgs', '2000-01-01', 'Sanaa', 'Sanaa', 'Al-Safia', 'Al-Safia', 'Sanaa City', '771888959', '771888999', 'run', 'Al-Rwad School', '12', 85, 'Ali Abdullah Abdullah Sallh', 'Father', 'Teacher', '771888999', 'Football, Reading', 'Won a science fair', 'To improve my skills', 'Become an engineer', 'Engineering School', '', '2024-09-28', NULL),
-(180, 'احمد صالح احمد محمد', '2000-01-01', 'اب', 'اب', 'الجبل الاخضر', 'Al-Safia', 'Sanaa City', '771888959', '771888999', 'run', 'Al-Rwad School', '12', 85, 'Ali Abdullah Abdullah Sallh', 'Father', 'Teacher', '771888999', 'Football, Reading', 'Won a science fair', 'To improve my skills', 'Become an engineer', 'Engineering School', '', '2024-09-29', NULL);
+(180, 'احمد صالح احمد محمد', '2000-01-01', 'اب', 'اب', 'الجبل الاخضر', 'Al-Safia', 'Sanaa City', '771888959', '771888999', 'run', 'Al-Rwad School', '12', 85, 'Ali Abdullah Abdullah Sallh', 'Father', 'Teacher', '771888999', 'Football, Reading', 'Won a science fair', 'To improve my skills', 'Become an engineer', 'Engineering School', '', '2024-09-29', NULL),
+(181, 'عبدالله عبدالعزيز عبدالله مسلم', '2025-01-31', 'بءلبء', 'سيبيسب', 'سبس', 'سيبسيب', 'سبث', '777117729', '777117729', 'لا', 'سثبسبل', 'التاسع', 80, 'عبدالعزيز عبدالله سعيد مسلم', 'اب', 'مزارع', '777663459', 'شثب', 'شسثبس', 'سشبيشب', 'شسب', 'الفقيد بن حمدة', NULL, '2025-01-09', NULL);
 
 -- --------------------------------------------------------
 
@@ -292,7 +293,8 @@ INSERT INTO `history` (`history_id`, `applicant_id`, `registration_date`, `regis
 (72, 165, '2024-09-25', 'مقبول', '2024-09-26', 'مقبول', '2024-09-26', ''),
 (73, 160, '2024-09-25', 'مقبول', '2024-09-25', 'مقبول', '2024-09-25', ''),
 (74, 162, '2024-09-25', 'مقبول', '2024-09-26', 'مقبول', '2024-09-26', ''),
-(75, 169, '2024-09-26', 'مقبول', NULL, '', NULL, '');
+(75, 169, '2024-09-26', 'مقبول', NULL, '', NULL, ''),
+(76, 163, '2025-01-09', 'مقبول', NULL, '', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -523,18 +525,19 @@ CREATE TABLE `student` (
   `school` varchar(100) NOT NULL,
   `student_phone` int(20) NOT NULL,
   `guardian_phone` int(20) NOT NULL,
-  `room_id` int(11) DEFAULT NULL
+  `room_id` int(11) DEFAULT NULL,
+  `accessories` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `student`
 --
 
-INSERT INTO `student` (`student_id`, `applicant_id`, `student_name`, `date_of_berth`, `governorate`, `directorate`, `area`, `classroom`, `school`, `student_phone`, `guardian_phone`, `room_id`) VALUES
-(9, NULL, 'al_rowad@gmail.com', '0000-00-00', '', '', '', '', '', 0, 0, 0),
-(10, 165, 'غبدالله محسن النقيب', '2024-09-11', '', '', '', '', '', 0, 0, 0),
-(11, 161, 'احمد حسن احمد علي باعنس', '1999-06-25', 'شبوة	', 'الطلح	', 'لعبل	', 'التاسع', 'الابداع', 773098320, 773098320, 0),
-(12, 160, 'احمد كرام عيظه ساحب ', '2002-06-25', 'حضرموت', 'تريم', 'مشطه', 'أول ثانوي', 'الابداع', 774228248, 774228248, 0);
+INSERT INTO `student` (`student_id`, `applicant_id`, `student_name`, `date_of_berth`, `governorate`, `directorate`, `area`, `classroom`, `school`, `student_phone`, `guardian_phone`, `room_id`, `accessories`) VALUES
+(9, NULL, 'al_rowad@gmail.com', '0000-00-00', '', '', '', '', '', 0, 0, 0, 'برنامج الحملة.pdf'),
+(10, 165, 'غبدالله محسن النقيب', '2024-09-11', '', '', '', '', '', 0, 0, 0, NULL),
+(11, 161, 'احمد حسن احمد علي باعنس', '1999-06-25', 'شبوة	', 'الطلح	', 'لعبل	', 'التاسع', 'الابداع', 773098320, 773098320, 0, '2.pdf'),
+(12, 160, 'احمد كرام عيظه ساحب ', '2002-06-25', 'حضرموت', 'تريم', 'مشطه', 'أول ثانوي', 'الابداع', 774228248, 774228248, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -818,7 +821,7 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT for table `applicants`
 --
 ALTER TABLE `applicants`
-  MODIFY `applicant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=181;
+  MODIFY `applicant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=182;
 
 --
 -- AUTO_INCREMENT for table `ckediter`
@@ -848,7 +851,7 @@ ALTER TABLE `floor`
 -- AUTO_INCREMENT for table `history`
 --
 ALTER TABLE `history`
-  MODIFY `history_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `history_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT for table `interviewers`
