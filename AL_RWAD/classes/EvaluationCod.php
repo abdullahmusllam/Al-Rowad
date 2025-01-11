@@ -416,6 +416,18 @@ class DB
             echo "" . $e->getMessage() . "";
         }
     }
+
+    public static function update_accessories($id, $accessories)
+    {
+        $conn = self::connected();
+        $sql = "UPDATE `student` SET `accessories` = '$accessories' WHERE `student`.`student_id` = $id;";
+        try {
+            $result = mysqli_query($conn, $sql);
+            return $result;
+        } catch (mysqli_sql_exception $e) {
+            echo "" . $e->getMessage() . "";
+        }
+    }
 }
 
 

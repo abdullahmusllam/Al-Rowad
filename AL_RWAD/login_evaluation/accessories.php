@@ -5,9 +5,27 @@ if (isset($_GET["id"])) {
     $id = $_GET["id"];
 }
 
+// جلب البيانات من قاعدة البيانات للتحقق من وجود ملف PDF
 $result = DB::check_for_accessories($id);
 $row = mysqli_fetch_array($result);
 $accessories = $row[0];
+
+// معالجة رفع الملف في حالة عدم وجوده
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['pdfFile']) && $accessories == NULL) {
+    $uploadDir = "../uploads/"; // المسار الذي يتم فيه حفظ الملفات
+    $fileTmpPath = $_FILES['pdfFile']['tmp_name'];
+    $fileName = $_FILES['pdfFile']['name'];
+    $destination = $uploadDir . $fileName;
+
+    // نقل الملف إلى المسار وحفظ اسمه في قاعدة البيانات
+    if (move_uploaded_file($fileTmpPath, $destination)) {
+        DB::update_accessories($id, $fileName); // تحديث قاعدة البيانات
+        header("Location: " . $_SERVER['PHP_SELF'] . "?id=$id"); // إعادة تحميل الصفحة
+        exit;
+    } else {
+        $uploadError = "حدث خطأ أثناء رفع الملف.";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -37,17 +55,25 @@ $accessories = $row[0];
         </ul>
     </div>
     <hr>
-    <?php
-    if ($accessories == NULL) { ?>
+
+    <?php if ($accessories == NULL): ?>
+        <!-- عرض نموذج رفع الملف إذا لم يكن الملف موجودًا -->
         <h2 class="mb-4">رفع ملف PDF</h2>
-        <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <form action="" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="pdfFile" class="form-label">اختر ملف PDF:</label>
                 <input type="file" class="form-control" id="pdfFile" name="pdfFile" accept="application/pdf" required>
             </div>
             <button type="submit" class="btn btn-primary" name="upload">رفع الملف</button>
         </form>
-    <?php } else { echo "saleh"; }?>
+        <?php if (isset($uploadError)): ?>
+            <div class="alert alert-danger mt-3"><?php echo $uploadError; ?></div>
+        <?php endif; ?>
+    <?php else: ?>
+        <!-- عرض ملف PDF إذا كان موجودًا -->
+        <h2 class="mb-4">عرض ملف PDF</h2>
+        <a href="../uploads/<?php echo urlencode($accessories); ?>" target="_blank" class="btn btn-primary">عرض ملف PDF</a>
+        <?php endif; ?>
 </body>
 
 </html>
